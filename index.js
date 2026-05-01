@@ -6,8 +6,17 @@
 
 // -----Comprobar si un estudiante aprobó y luego si obtuvo nota sobresaliente-----
 
-const nota = prompt("por favor ingresa la nota")
+const nota = parseFloat (prompt("por favor ingresa la nota"))
 
+if (nota >=3.5) {
+    if (nota >= 4.0) {
+        console.log("Pasaste con sobresaliente");
+    } else {
+        console.log("Pasaste la materia");
+    }
+} else {
+    console.log("Reprobaste la materia. Debes presentar taller de recuperación");
+}
 
 
 
