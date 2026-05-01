@@ -19,6 +19,25 @@ if (nota >=3.5) {
 }
 
 
+// OPERADORES LOGISTICOS
+
+// sirven para combinar o modificar condiciones, ayudan a tomar decisiones más complejas combinando condiciones.
+// Los principales son:
+// 1. && significa "y" ambas condiciones deben cumplirse
+// 2. OR || "o" funciona si se cumple solo una condicio
+// 3. NOT ! "no" invierte el valor
 
 
-// ------Validar si un usuario ingresó contraseña correcta y luego si tiene permisos de administrador-----
+const proyectoIngles = prompt("¿presentaste el proyecto de inglés?") == "si";
+
+if (nota >= 4.5 && proyectoIngles) {
+    console.log("Como aprobaste y presentaste el proyecto de inglés, te ganaste el viaje extracurricular");
+} else {
+    console.log ("No aplicas para el viaje extracurricular, intentalo el próximo semestre");
+}
+
+
+// ARRAYS
+
+Un array es una colección de varios datos en una sola variable, como una lista, sirve para no 
+tener que crear una constante por cada dato.
