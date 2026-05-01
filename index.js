@@ -32,6 +32,7 @@ const proyectoIngles = prompt("¿presentaste el proyecto de inglés?") == "si";
 
 if (nota >= 4.5 && proyectoIngles) {
     console.log("Como aprobaste y presentaste el proyecto de inglés, te ganaste el viaje extracurricular");
+
 } else {
     console.log ("No aplicas para el viaje extracurricular, intentalo el próximo semestre");
 }
@@ -39,5 +40,30 @@ if (nota >= 4.5 && proyectoIngles) {
 
 // ARRAYS
 
-Un array es una colección de varios datos en una sola variable, como una lista, sirve para no 
-tener que crear una constante por cada dato.
+// Un array es una colección de varios datos en una sola variable, como una lista, sirve para no 
+// tener que crear una constante por cada dato. Funciona con []
+
+
+// LENGTH = muestra la cantidad de items en la lista
+
+const destinosViaje = ["guatavita", "barichara", "napoles"];
+
+console.log("Cantidad de destinos para viaje extracurricular:", destinosViaje.length);
+
+
+// FOREACH = muestra cada elemento de la lista
+
+destinosViaje.forEach(function(destinosViaje) {
+    console.log("Destino para viaje extracurricular:", destinosViaje);
+});
+
+
+// PUSH = agrega elemento al final
+
+const sugerenciaDestino = prompt("Agrega una sugerencia de destino para el viaje extracurricular:");
+
+destinosViaje.push(sugerenciaDestino);
+
+console.log(`Se agregó "${sugerenciaDestino}" a la lista de destinos`);
+console.log(destinosViaje);
+
