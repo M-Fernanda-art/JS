@@ -67,3 +67,41 @@ destinosViaje.push(sugerenciaDestino);
 console.log(`Se agregó "${sugerenciaDestino}" a la lista de destinos`);
 console.log(destinosViaje);
 
+
+// OBJETOS
+
+// Es una variable que guarda información más completa y organizada mediante propiedades. La diferencia con 
+// el Array es que es una lista mientras que el objeto son datos detallados. El objeto tiene metodos que son 
+// funciones que realizan una acción con la información del objeto.
+
+
+// ASSIGN = Muestra dos bloques de información en uno
+
+const cursoUno = {
+    nombreProfesor: "Laura Gutierrez",
+    codigo: 1305
+};
+
+const materiasSemestre = {
+    primerSemestre: ["matematicas", "artes", "inglés", "español"],
+    segundoSemestre: ["fisica", "biologia", "quimica", "sociales"]
+};
+
+const infoCurso = Object.assign({}, cursoUno, materiasSemestre);
+
+console.log(infoCurso);
+
+
+// FREEZE = No permite realizar cambios a los que uno congele
+
+Object.freeze(cursoUno);
+
+cursoUno.nombreProfesor = "Xiommy Arevalo";
+cursoUno.codigo = 1824;
+
+console.log(cursoUno);
+
+// HAS OWN PROPERTY = Para revisar si existe una propiedad
+
+console.log(cursoUno.hasOwnProperty("codigo"));
+console.log(cursoUno.hasOwnProperty("numeroEstudiantes"));
