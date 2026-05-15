@@ -105,3 +105,27 @@ console.log(cursoUno);
 
 console.log(cursoUno.hasOwnProperty("codigo"));
 console.log(cursoUno.hasOwnProperty("numeroEstudiantes"));
+
+
+// AMPLIACIÓN DE INVESTIGACIÓN
+
+function verificarIngreso() {
+    const edad = parseInt(document.getElementById("edad").value);
+    // Obtiene el valor y convierte texto a número entero
+    const resultado = document.getElementById("resultado");
+
+    if(edad >= 12) {
+        // Si tiene 12 o más puede ingresar
+        if(edad >= 18) {
+            // Dentro de los que pueden ingresar, verificar si es adulto
+            resultado.textContent = "Puedes ingresar a todas las atracciones"
+            // Mensaje si es igual o mayor a 18
+    } else {
+        resultado.textContent = "Puedes ingresar, pero con restricciones en algunas atracciones";
+        // Mensaje edad entre 12 a 17
+    }
+    } else { 
+        resultado.textContent = "No puedes ingresar sin acompañante adulto";
+        // Mensaje si es menor a 12
+    }
+}
