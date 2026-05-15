@@ -154,3 +154,31 @@ function verificarEntrada() {
         // No cumple ninguna
     }
 }
+
+// LISTA DE LIBROS
+
+const libros = [
+    "De la tierra a la luna",
+    "Shadowhunters",
+    "La cabaña",
+    "El principito",
+    "Maze runner"
+];
+// Lista que almacena varios libros en una variable
+
+function mostrarLibros() {
+    // Se activa al presionar el botón
+    const lista = document.getElementById("listaLibros");
+    lista.innerHTML = "";
+    // Evita duplicados
+
+    libros.forEach(function(libro) {
+        // Recorre cada libro
+        const li = document.createElement("li");
+        // Crea una línea de lista
+        li.textContent = libro;
+        // Asigna el texto
+        lista.appendChild(li);
+        // La muestra
+    });
+}
