@@ -107,7 +107,11 @@ console.log(cursoUno.hasOwnProperty("codigo"));
 console.log(cursoUno.hasOwnProperty("numeroEstudiantes"));
 
 
+
 // AMPLIACIÓN DE INVESTIGACIÓN
+
+
+// INGRESO A PARQUE DE DIVERSIONES
 
 function verificarIngreso() {
     const edad = parseInt(document.getElementById("edad").value);
@@ -127,5 +131,26 @@ function verificarIngreso() {
     } else { 
         resultado.textContent = "No puedes ingresar sin acompañante adulto";
         // Mensaje si es menor a 12
+    }
+}
+
+
+// VERIFICAR ENTRADA VIP
+
+function verificarEntrada() {
+    const edad = parseInt(document.getElementById("edad").value);
+    const boletoVIP = document.getElementById("boletoVIP").checked;
+    // .checked devuelve true y false
+    const resultado2 = document.getElementById("resultado2");
+
+    if (edad >= 18 && boletoVIP) {
+        // Debe cumplir que sea mayor de edad y tener boleto VIP
+        resultado2.textContent = "Puedes ingresar al evento VIP";
+    } else if (edad >= 18 || boletoVIP) {
+        // Si cumple solo una condición
+        resultado2.textContent = "Cumples parcialmente, consulta con administración";
+    } else {
+        resultado2.textContent = "No puedes ingresar al evento VIP";
+        // No cumple ninguna
     }
 }
