@@ -1,6 +1,6 @@
 // CONDICIONALES ANIDADOS
 
-// Es una condición dentro de otra condición. Para esto se usa "if". Se utiliza 
+// Es una condición dentro de otra condición. Para esto se usa "if". Se utiliza
 // cuando primero es necesario comprobar una condición general y luego una especifica.
 
 
@@ -40,7 +40,7 @@ if (nota >= 4.5 && proyectoIngles) {
 
 // ARRAYS
 
-// Un array es una colección de varios datos en una sola variable, como una lista, sirve para no 
+// Un array es una colección de varios datos en una sola variable, como una lista, sirve para no
 // tener que crear una constante por cada dato. Funciona con []
 
 
@@ -70,8 +70,8 @@ console.log(destinosViaje);
 
 // OBJETOS
 
-// Es una variable que guarda información más completa y organizada mediante propiedades. La diferencia con 
-// el Array es que es una lista mientras que el objeto son datos detallados. El objeto tiene metodos que son 
+// Es una variable que guarda información más completa y organizada mediante propiedades. La diferencia con
+// el Array es que es una lista mientras que el objeto son datos detallados. El objeto tiene metodos que son
 // funciones que realizan una acción con la información del objeto.
 
 
@@ -128,7 +128,7 @@ function verificarIngreso() {
         resultado.textContent = "Puedes ingresar, pero con restricciones en algunas atracciones";
         // Mensaje edad entre 12 a 17
     }
-    } else { 
+    } else {
         resultado.textContent = "No puedes ingresar sin acompañante adulto";
         // Mensaje si es menor a 12
     }
@@ -154,6 +154,7 @@ function verificarEntrada() {
         // No cumple ninguna
     }
 }
+
 
 // LISTA DE LIBROS
 
@@ -182,3 +183,27 @@ function mostrarLibros() {
         // La muestra
     });
 }
+
+// INFORMACIÓN DE LIBRO
+
+const libro = {
+    titulo: "La cabaña",
+    autor: "W. Paul Young",
+    año: 2007,
+    genero: "Cristiano"
+};
+// Información del libro
+
+function mostrarLibro() {
+    // Muestra los datos
+    const info =document.getElementById("infoLibro");
+    // Obtiene contenedor
+
+    info.innerHTML = `
+        <p><strong>Título:</strong> ${libro.titulo}</p>
+        <p><strong>Autor:</strong> ${libro.autor}</p>
+        <p><strong>Año:</strong> ${libro.año}</p>
+        <p><strong>Género:</strong> ${libro.genero}</p>
+    `;
+}
+// Inserta contenido HTML dinamicamente
